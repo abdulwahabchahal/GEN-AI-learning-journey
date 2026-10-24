@@ -149,3 +149,13 @@ A simple Retrieval-Augmented Generation system over a fictional university handb
 Run `python rag_build.py` once, then `python rag_qa.py`.
 
 The prompt instructs the model to answer only from the retrieved context and to say it doesn't have the information when the answer isn't in the handbook.
+
+## Project 5: Function Calling (Tool Use)
+
+A small store assistant that lets Gemini call local Python functions.
+
+- `tool_assistant.py`: defines two tools (`check_order_status`, `get_product_price`) over fictional data, sends their declarations to Gemini, executes the tool the model requests, and returns the result so the model can write the final answer
+
+Run `python tool_assistant.py`.
+
+The model only requests tools. The application decides what runs: only registered functions can be executed, and errors such as unknown orders are returned to the model instead of being invented.
