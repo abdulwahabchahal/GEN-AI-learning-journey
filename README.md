@@ -13,3 +13,13 @@ User input → API request (with API key) → Gemini model → API response → 
 
 ## Security
 The API key is stored in `.env`, which is excluded from Git via `.gitignore`.
+
+## Task 2: Embeddings and Semantic Search
+
+Scripts using the Gemini embedding model (`gemini-embedding-001`):
+
+- `embedding_basics.py`: generates an embedding for one sentence and prints the vector length and first values
+- `similarity_experiment.py`: compares 8 sentences with cosine similarity
+- `semantic_search.py`: semantic search over 10 facts about a fictional academy, tested with sample questions
+
+Run any script with `python <filename>.py`.
