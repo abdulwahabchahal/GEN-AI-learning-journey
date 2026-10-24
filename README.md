@@ -137,6 +137,15 @@ The `chroma_db/` folder is created locally when you run `build_db.py` and is not
 - How vector databases store embeddings with metadata and retrieve similar records
 - Why embeddings and vector search are the foundation of RAG applications
 
-## Next Steps
 
-Connect the retrieval step to an LLM so the retrieved information is used to generate a final answer, which completes a basic RAG pipeline.
+## Project 4: RAG Document Q&A
+
+A simple Retrieval-Augmented Generation system over a fictional university handbook.
+
+- `knowledge_base.txt`: the knowledge source (11 sections)
+- `rag_build.py`: splits the handbook into chunks, embeds them with Gemini, and stores them in Chroma
+- `rag_qa.py`: retrieves the most relevant chunks for a question and sends them to Gemini to generate an answer
+
+Run `python rag_build.py` once, then `python rag_qa.py`.
+
+The prompt instructs the model to answer only from the retrieved context and to say it doesn't have the information when the answer isn't in the handbook.
