@@ -23,3 +23,10 @@ Scripts using the Gemini embedding model (`gemini-embedding-001`):
 - `semantic_search.py`: semantic search over 10 facts about a fictional academy, tested with sample questions
 
 Run any script with `python <filename>.py`.
+
+## Task 3: Vector Database (Chroma)
+
+- `build_db.py`: embeds 10 university FAQs with Gemini and stores them in a local Chroma database with metadata
+- `search_db.py`: embeds natural-language questions and retrieves the most similar FAQs, with optional category filtering
+
+Run `python build_db.py` once, then `python search_db.py`.
